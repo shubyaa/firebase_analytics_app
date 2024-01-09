@@ -44,6 +44,12 @@ dependencies:
   package_info_plus: ^4.2.0
   firebase_analytics: ^10.7.4
   firebase_crashlytics: ^3.0.2
+  firebase_messaging: ^14.7.9
+  fluttertoast: ^8.2.4
+  flutter_local_notifications: ^16.3.0
+  async_redux: ^21.0.1
+
+  dio: ^5.4.0
 
 dev_dependencies:
   flutter_test:

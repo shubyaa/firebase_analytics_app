@@ -444,3 +444,4 @@ fabric.properties
 
 # Firebase Options
 lib/firebase_options.dart
+
