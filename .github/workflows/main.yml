@@ -16,6 +16,12 @@ jobs:
         with:
           java-version: "17.x"
 
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "3.16.5"
+      - run: flutter pub get
+      # - run: flutter test
+
       - name: Load Google Service file
         env:
           DATA: ${{ secrets.GOOGLE_SERVICES_JSON }}
@@ -27,11 +33,6 @@ jobs:
         run: |
           echo "$FIREBASE_OPTIONS_BASE64" | base64 --decode > lib/firebase_options.dart
 
-      - uses: subosito/flutter-action@v1
-        with:
-          flutter-version: "3.16.5"
-      - run: flutter pub get
-      # - run: flutter test
       - run: flutter build apk -v --release --obfuscate --split-debug-info=.
       # - run: |
       #     flutter build ios --no-codesign
